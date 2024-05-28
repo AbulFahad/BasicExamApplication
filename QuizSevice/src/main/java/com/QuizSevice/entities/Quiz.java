@@ -22,5 +22,4 @@ public class Quiz {
     @Column(name="QuizName")
     private String quizName;
 
-
 }
