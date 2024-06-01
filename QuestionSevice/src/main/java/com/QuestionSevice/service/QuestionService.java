@@ -9,6 +9,6 @@ import java.util.List;
 public interface QuestionService {
     public List<Question> getAllQuestions();
     public Question getQuestionById(Long questionId);
-    public Question addQuestion(Question question);
-    public void deleteQuiestionById(Long id);
+    public void addQuestion(Question question);
+    public void deleteQuestionById(Long id);
 }

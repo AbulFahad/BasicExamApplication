@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class QuestionServiceImpl implements QuestionService{
 
-    private QuestionRepository questionRepository;
+    private final QuestionRepository questionRepository;
 
     public QuestionServiceImpl(QuestionRepository questionRepository){
         this.questionRepository=questionRepository;
@@ -25,12 +25,12 @@ public class QuestionServiceImpl implements QuestionService{
     }
 
     @Override
-    public Question addQuestion(Question question) {
-        return questionRepository.save(question);
+    public void addQuestion(Question question) {
+        questionRepository.save(question);
     }
 
     @Override
-    public void deleteQuiestionById(Long id) {
+    public void deleteQuestionById(Long id) {
         questionRepository.deleteById(id);
     }
 }
