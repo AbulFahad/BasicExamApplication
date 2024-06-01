@@ -26,7 +26,12 @@ public class QuizServiceImpl implements QuizServices{
     }
 
     @Override
-    public Quiz getQuiz(Long id) {
+    public Quiz getQuizById(Long id) {
         return quizRepository.findById(id).orElseThrow(() -> new RuntimeException("Quiz id is not valid"));
+    }
+
+    @Override
+    public void deleteQuizById(Long id) {
+        quizRepository.deleteById(id);
     }
 }

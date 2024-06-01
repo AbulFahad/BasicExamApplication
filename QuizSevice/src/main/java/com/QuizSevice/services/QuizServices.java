@@ -14,5 +14,7 @@ public interface QuizServices {
     public List<Quiz> getAllQuiz();
 
     //get quiz by ID
-    public Quiz getQuiz(Long id);
+    public Quiz getQuizById(Long id);
+
+    public void deleteQuizById(Long id);
 }
