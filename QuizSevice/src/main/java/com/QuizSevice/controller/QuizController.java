@@ -1,7 +1,9 @@
 package com.QuizSevice.controller;
 
+import com.QuizSevice.AppRestTemplate;
 import com.QuizSevice.entities.Quiz;
 import com.QuizSevice.services.QuizServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,12 +12,12 @@ import java.util.List;
 @RequestMapping("/quiz")
 public class QuizController {
 
+    @Autowired
+    AppRestTemplate appRestTemplate;
+    @Autowired
     private QuizServices quizServices;
 
-    public QuizController(QuizServices quizServices){
-        this.quizServices=quizServices;
 
-    }
 
     @PostMapping
     public void addQuiz(@RequestBody Quiz quiz){

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.naming.Name;
+import java.util.List;
 
 @Entity
 @Getter
@@ -21,5 +22,5 @@ public class Quiz {
     private Long quizId;
     @Column(name="QuizName")
     private String quizName;
-
+    transient private List<Question> questions;
 }

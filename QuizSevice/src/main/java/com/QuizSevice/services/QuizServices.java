@@ -5,16 +5,19 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public interface QuizServices {
 
     //add quiz
-    public void addQuiz(Quiz quiz);
+    void addQuiz(Quiz quiz);
 
     //get all quiz;
-    public List<Quiz> getAllQuiz();
+    List<Quiz> getAllQuiz();
 
     //get quiz by ID
-    public Quiz getQuizById(Long id);
+     Quiz getQuizById(Long id);
 
-    public void deleteQuizById(Long id);
+    void deleteQuizById(Long id);
+
+
 }
